@@ -1,0 +1,15 @@
+<button (click)="handleShowDiv()">
+  Показать
+</button>
+
+<div *ngIf="isShowContent; else anotherContent">
+  Директивы определяют набор инструкций, которые применяются при рендеринге html-кода.
+</div>
+
+<ng-template #anotherContent>
+  <div>
+    Для показа текста нажми на кнопку
+  </div>
+</ng-template>
+
+<app-header (onSignInClick)="onSignIn($event)"></app-header>

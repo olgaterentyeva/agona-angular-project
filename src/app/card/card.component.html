@@ -1,0 +1,26 @@
+<div class="card">
+<h2 [ngStyle]="{
+  color: title.length < 5 ? 'black' : 'red'
+}">{{title}}</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+<div>
+  <img [src]="imgUrl">
+  <br>
+  <button [disabled]="disabled">Top here</button>
+</div>
+
+  <div style="margin-top: 30px">
+    <button (click)="changeTitle()">Change title</button>
+    <button (click)="title = 'Me'">Change title inline</button>
+  </div>
+
+<!--  <div style="margin-top: 30px; margin-bottom: 40px">-->
+<!--    <input type="text">-->
+<!--  </div>-->
+
+  <div style="margin-top: 30px; margin-bottom: 40px">
+    <input type="text" [(ngModel)]="title">
+  </div>
+
+</div>
